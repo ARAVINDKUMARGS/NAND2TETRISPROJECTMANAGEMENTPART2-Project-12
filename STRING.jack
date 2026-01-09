@@ -1,0 +1,21 @@
+class String {
+    function String new(int maxLength) {
+        var String s;
+        let s = Sys.newString(maxLength);
+        return s;
+    }
+
+    method int length() {
+        return Sys.stringLength(this);
+    }
+
+    method void appendChar(int c) {
+        do Sys.appendChar(this, c);
+        return;
+    }
+
+    method void appendString(String other) {
+        do Sys.appendString(this, other);
+        return;
+    }
+}
