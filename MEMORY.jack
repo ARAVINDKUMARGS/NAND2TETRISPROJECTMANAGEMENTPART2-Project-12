@@ -1,0 +1,34 @@
+class Memory {
+    function void init() {
+        // Initialize memory if needed
+        return;
+    }
+
+    function void clear(int start, int size) {
+        var int i;
+        let i = 0;
+        while (i < size) {
+            do Memory.poke(start + i, 0);
+            let i = i + 1;
+        }
+        return;
+    }
+
+    function void poke(int address, int value) {
+        do Sys.poke(address, value);
+        return;
+    }
+
+    function int peek(int address) {
+        return Sys.peek(address);
+    }
+
+    function int allocate(int size) {
+        return Sys.alloc(size);
+    }
+
+    function void deAlloc(int address) {
+        do Sys.deAlloc(address);
+        return;
+    }
+}
