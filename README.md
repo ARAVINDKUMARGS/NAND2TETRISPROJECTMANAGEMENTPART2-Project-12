@@ -1,124 +1,74 @@
-# NAND2TETRISPROJECTMANAGEMENTPART2-Project-12
-PROJECT-12
+# Project 12 – Building the OS (Sys Library)
 
-# NAND2TETRISPROJECTMANAGEMENTPART2-Project-12
-
-## Project 12 – Final Integration
-
-**Project Code:** PROJECT12
-**Course:** Build a Modern Computer from First Principles (Nand2Tetris Part II)
-**Institution:** Hebrew University of Jerusalem
+**Course:** Build a Modern Computer from First Principles (Nand2Tetris Part II)  
+**Institution:** Hebrew University of Jerusalem  
+**Author:** Aravind Kumar GS  
+**Email:** aravindkumar06062006@gmail.com  
+**License:** MIT (Educational purposes only)
 
 ---
 
 ## Overview
 
-Project 12 is the **culmination of Nand2Tetris Part II**, integrating all previous projects to build a **fully functioning computer system**. This project demonstrates **end-to-end execution** of Jack programs: from high-level source code, through compilation to VM code, system calls, and hardware execution on the Hack platform.
+Project 12 implements the **basic operating system (OS) routines** in the **Jack language**. These routines provide essential services to user programs, including memory access, arithmetic, I/O, and string handling. The project introduces the **Sys library**, which serves as the foundation for the Hack OS.
 
-The project validates the **compiler, OS routines, VM translation, and CPU emulator**, producing a complete software-hardware pipeline.
+The Sys library consists of the following Jack classes:
+
+- **Array.jack** – Array manipulation routines  
+- **Keyboard.jack** – Keyboard input routines  
+- **Math.jack** – Mathematical operations (add, multiply, divide, etc.)  
+- **Memory.jack** – Memory access and heap management  
+- **Output.jack** – Textual output routines  
+- **Screen.jack** – Screen display and graphics routines  
+- **String.jack** – String handling routines  
+- **Sys.jack** – Top-level interface for the OS routines  
+
+These classes are tested using VM Emulator and Hardware Simulator to ensure correct functionality.
 
 ---
 
-## Objectives
+## Files to Submit
 
-* Compile Jack programs into VM code (from Project 8).
-* Execute VM code with OS routines (Projects 9 & 10).
-* Run compiled programs in the **CPU Emulator** and **Hardware Simulator**.
-* Test full integration with user programs, including I/O, arithmetic, and control flow.
-* Verify correctness and performance of the **entire computer system**.
-
----
-
-## Folder Structure
+Your submission must include the following **Jack source files**, **all at the top level** (no directories):
 
 ```
-Project12/
-│── README.md
-│── src/
-│   └── CompilerOutput/
-│       └── Main.vm
-│── lib/
-│   └── Sys.vm
-│── test/
-│   ├── PongGame/
-│   ├── ArrayTest/
-│   └── StringTest/
-│── docs/
-│   └── FinalIntegrationGuide.pdf
+
+Array.jack
+Keyboard.jack
+Math.jack
+Memory.jack
+Output.jack
+Screen.jack
+String.jack
+Sys.jack
+
 ```
+
+> **Important:** Do not include compiled `.vm` files. Only the `.jack` source files are required.
 
 ---
 
-## Getting Started
+## Submission Instructions
 
-### Step 1: Compile Jack Programs
-
-```bash
-cd Project12/src
-java JackCompiler CompilerOutput/Main.jack
+1. Place all **Jack source files** in a single folder.  
+2. Zip the files at the **top level** (no subfolders) as:  
 ```
 
-* Produces `.vm` files in `CompilerOutput/`.
+project12.zip
 
-### Step 2: Load OS Routines
-
-* Copy `Sys.vm` from Project 10 into the program directory.
-
-### Step 3: Run VM Programs
-
-1. Open the **VM Emulator**.
-2. Load `.vm` files together with `Sys.vm`.
-3. Observe program execution and verify outputs.
-
-### Step 4: Test on Hardware Emulator
-
-* Load compiled `.hack` programs into the **Hardware Simulator**.
-* Verify correct operation of I/O routines, arithmetic, and control flow.
-
----
-
-## Supported Features
-
-### Full Jack Language
-
-* Variables, arrays, strings, subroutines
-* Control structures: `if`, `while`, `do`, `return`
-
-### OS Routines
-
-* Memory management, stack operations
-* Screen and keyboard I/O
-* Exception handling
-
-### Hardware Execution
-
-* Compatible with CPU Emulator and Hack platform
-* Correct execution of arithmetic, logical, and control flow operations
-
-### Example
-
-**Pong Game (`PongGame/Main.jack`):**
-
-* Implements a simple Pong game using Jack language features and OS routines.
-* Output is displayed on the Hardware Simulator screen.
+```
+3. Upload via the **“My Submissions”** tab on the course platform.
 
 ---
 
 ## Notes
 
-* Project 12 **validates the full system**: compiler + OS + VM + CPU.
-* Thorough testing is required to ensure **all components work seamlessly**.
-* Demonstrates the power of building a modern computer from first principles.
-
----
-
-## Author
-
-**Aravind Kumar GS**
-Email: `aravindkumar06062006@gmail.com`
+- Ensure that all routines in the Sys library are **fully functional** and correctly implemented in Jack.  
+- The OS routines will be used in **later projects**, so correctness is crucial.  
+- Use the **VM Emulator and Hardware Simulator** to test memory, math, screen, keyboard, array, and string functionalities.  
 
 ---
 
 ## License
 
-Educational purposes only. Do not distribute or claim as your own work.
+MIT License – Educational purposes only. Do **not** distribute or claim as your own work.
