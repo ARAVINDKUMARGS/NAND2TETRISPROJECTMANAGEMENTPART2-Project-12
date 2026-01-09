@@ -1,0 +1,73 @@
+class Sys {
+    function int alloc(int size) {
+        return 0; // placeholder, real memory allocation handled by OS
+    }
+
+    function void deAlloc(int address) {
+        return; // placeholder
+    }
+
+    function void clearScreen() {
+        return; // placeholder
+    }
+
+    function void drawPixel(int x, int y, int color) {
+        return; // placeholder
+    }
+
+    function void drawLine(int x1, int y1, int x2, int y2, int color) {
+        return; // placeholder
+    }
+
+    function void printInt(int n) {
+        return; // placeholder
+    }
+
+    function void printChar(int c) {
+        return; // placeholder
+    }
+
+    function void printString(String s) {
+        return; // placeholder
+    }
+
+    function void println() {
+        return; // placeholder
+    }
+
+    function int peek(int address) {
+        return 0;
+    }
+
+    function void poke(int address, int value) {
+        return;
+    }
+
+    function int keyPressed() {
+        return 0;
+    }
+
+    function int readChar() {
+        return 0;
+    }
+
+    function int readLine() {
+        return 0;
+    }
+
+    function String newString(int maxLength) {
+        return null;
+    }
+
+    function int stringLength(String s) {
+        return 0;
+    }
+
+    function void appendChar(String s, int c) {
+        return;
+    }
+
+    function void appendString(String s, String other) {
+        return;
+    }
+}
