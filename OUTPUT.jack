@@ -1,0 +1,21 @@
+class Output {
+    function void printInt(int n) {
+        do Sys.printInt(n);
+        return;
+    }
+
+    function void printChar(int c) {
+        do Sys.printChar(c);
+        return;
+    }
+
+    function void printString(String s) {
+        do Sys.printString(s);
+        return;
+    }
+
+    function void println() {
+        do Sys.println();
+        return;
+    }
+}
