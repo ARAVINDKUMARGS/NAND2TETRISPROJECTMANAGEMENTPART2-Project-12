@@ -1,0 +1,32 @@
+class Math {
+    function int multiply(int a, int b) {
+        var int result, i;
+        let result = 0;
+        let i = 0;
+        while (i < b) {
+            let result = result + a;
+            let i = i + 1;
+        }
+        return result;
+    }
+
+    function int divide(int a, int b) {
+        var int result;
+        let result = 0;
+        while (a >= b) {
+            let a = a - b;
+            let result = result + 1;
+        }
+        return result;
+    }
+
+    function int min(int a, int b) {
+        if (a < b) return a;
+        return b;
+    }
+
+    function int max(int a, int b) {
+        if (a > b) return a;
+        return b;
+    }
+}
