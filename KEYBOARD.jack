@@ -1,0 +1,13 @@
+class Keyboard {
+    function int keyPressed() {
+        return Sys.keyPressed();
+    }
+
+    function int readChar() {
+        return Sys.readChar();
+    }
+
+    function int readLine() {
+        return Sys.readLine();
+    }
+}
