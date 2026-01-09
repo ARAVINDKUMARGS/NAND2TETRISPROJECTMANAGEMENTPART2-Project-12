@@ -1,0 +1,25 @@
+class Array {
+    function Array new(int size) {
+        var Array arr;
+        let arr = Array.new(size);
+        return arr;
+    }
+
+    method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+
+    method int get(int i) {
+        return this[i];
+    }
+
+    method void set(int i, int value) {
+        let this[i] = value;
+        return;
+    }
+
+    method int size() {
+        return Array.size(this);
+    }
+}
